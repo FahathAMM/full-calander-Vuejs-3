@@ -2,9 +2,6 @@
     <div class="container m-auto">
         <h1 class="text-6xl text-center">Calendar</h1>
         <section>
-            <!-- {{ daysInMonth(currentYear, currentMonth) }} -->
-            <!-- {{ startDay() }} -->
-            {{ currentMonth }}
             <section class="mx-8 flex justify-between">
                 <h2 class="font-bold text-3xl">{{ currentMonthName }}</h2>
                 <h2 class="font-bold text-3xl">{{ currentYear }}</h2>
@@ -38,7 +35,6 @@
             <button class="py-2 px-4 border rounded" @click="prev">Prev</button>
             <button class="py-2 px-4 border rounded" @click="next">Next</button>
         </section>
-        {{ currentDay(21) }}
     </div>
 </template>
 
@@ -46,7 +42,6 @@
 export default {
     data() {
         return {
-            // currentDay: new Date().getDate(),
             currentYear: new Date().getFullYear(),
             currentMonth: new Date().getMonth(),
             days: ['sun', 'mon', 'tue', 'wen', 'thu', 'fri', 'sat'],
